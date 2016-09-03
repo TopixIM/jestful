@@ -1,6 +1,8 @@
 
 (ns jestful.schema)
 
-(def database {:states {}, :users {}})
+(def message {:autho-name "", :time nil, :id nil, :text ""})
 
-(def state {:nickname nil, :user-id nil, :id nil})
+(def database {:states {}, :messages [], :users {}})
+
+(def state {:nickname "", :user-id nil, :draft "", :id nil})

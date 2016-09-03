@@ -25,8 +25,12 @@
   (render-app!)
   (setup-socket!
     store-ref
-    {:on-close! (fn [event] (.error js/console "Lost connection!")),
-     :url "ws://repo:5020"})
+    {:on-close!
+     (fn [event]
+       (.error js/console "Lost connection!")
+       (reset! store-ref nil)
+       (js/setTimeout (fn [] (.reload js/location)) 8000)),
+     :url "ws://js.topix.im:5020"})
   (add-watch store-ref :changes render-app!)
   (add-watch states-ref :changes render-app!)
   (println "app started!")

@@ -37,15 +37,7 @@
                      state-id
                      op-id
                      op-time)]
-        (comment
-          println
-          "event"
-          @writer-db-ref
-          op
-          op-data
-          state-id
-          op-id
-          op-time)
+        (println "event" op op-data state-id op-id op-time)
         (reset! writer-db-ref new-db)
         (recur)))
     (render-loop!))

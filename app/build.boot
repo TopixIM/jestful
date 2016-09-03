@@ -35,6 +35,8 @@
     (html {}
       (head {}
         (title (use-text "Jestful"))
+        (meta'{:attrs {:charset "utf-8"}})
+        (meta' {:attrs {:name "viewport" :content "width=device-width, initial-scale=1"}})
         (link {:attrs {:rel "icon" :type "image/jpg" :href "cumulo.png"}})
         (if (:build? data)
           (link (:attrs {:rel "manifest" :href "manifest.json"})))
