@@ -1,5 +1,5 @@
 
-(ns jestful.component.container
+(ns jestful.comp.container
   (:require [hsl.core :refer [hsl]]
             [respo.alias :refer [create-comp div span]]
             [jestful.style.widget :as widget]
